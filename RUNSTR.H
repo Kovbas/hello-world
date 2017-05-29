@@ -1,4 +1,3 @@
-//#include ""
 
 enum {
 	SYML = 4,
@@ -15,7 +14,7 @@ heart - 3
 	FILLC = '°'
 };
 struct sizeString {
-	char symb;
+//	char symb;
 	int len;
 	int hig;
 	int vol;
@@ -197,6 +196,24 @@ int i, j, stPos;
 			case '3': stPos = addNum (s3, runStr,\
 						 stPos);
 				break;
+			case '4': stPos = addNum (s4, runStr,\
+						 stPos);
+				break;
+			case '5': stPos = addNum (s5, runStr,\
+						 stPos);
+				break;
+			case '6': stPos = addNum (s6, runStr,\
+						 stPos);
+				break;
+			case '7': stPos = addNum (s7, runStr,\
+						 stPos);
+				break;
+			case '8': stPos = addNum (s8, runStr,\
+						 stPos);
+				break;
+			case '9': stPos = addNum (s9, runStr,\
+						 stPos);
+				break;
 
 			default : break;
 /*			case '-': addNumX (, char chArr[][], stPos);
@@ -257,12 +274,12 @@ int i, j, jdif, jm;
 				jdif++;
 			}
 
-			printf ("\n\nPress Ctrl+Break for Exit.\n");
+			printf ("\n\nPress any key for stop runnig string.\n");
+			if (kbhit())
+				return 0;
 			delay (100);
 	      }
 	}
-
-	printf ("\n\nPress Enter for Exit.\n");
 }
 
 /*=============================================================*/
@@ -291,15 +308,15 @@ int main () {
 
 char *strP;
 
-/*	for ( i = 0 ; i < 100; i ++)
-		printf ("\n");
-  */
+//	clrscr();
 
 	/* enter the string */
 	printf ("The program takes numbers and makes running string with it.\n");
 	printf ("Enter the text (only numbers and symbol minus):\n");
 
-	strP = enterNumsStr();
+	//strP = enterNumsStr();
+
+	strP = "491-63-26";
 
 	printf ("We have got the next string:\n");
 	printf ("%s\n\n", strP);
@@ -319,7 +336,7 @@ char *strP;
 
 	writeRunStr(makeStr(strP));
 
-	getchar();
+	//getchar();
 
 	return 0;
 
