@@ -1,4 +1,7 @@
-
+/* made by Valentin Kovbas 2017-05
+the program take numbers from a keyboard, make array and output it
+to the monitor
+*/
 enum {
 	SYML = 4,
 	SYMH = 6,
@@ -276,7 +279,7 @@ int i, j, jdif, jm;
 
 			printf ("\n\nPress any key for stop runnig string.\n");
 			if (kbhit())
-				return 0;
+				return;
 			delay (100);
 	      }
 	}
@@ -314,9 +317,9 @@ char *strP;
 	printf ("The program takes numbers and makes running string with it.\n");
 	printf ("Enter the text (only numbers and symbol minus):\n");
 
-	//strP = enterNumsStr();
+	strP = enterNumsStr();
 
-	strP = "491-63-26";
+	//strP = "491-63-26";
 
 	printf ("We have got the next string:\n");
 	printf ("%s\n\n", strP);
