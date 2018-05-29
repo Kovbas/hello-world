@@ -13,8 +13,8 @@ black square - 178
 white square - 176
 heart - 3
 */
-	FILL = '²',
-	FILLC = '°'
+	FILL = 'Â²',
+	FILLC = 'Â°'
 };
 struct sizeString {
 //	char symb;
